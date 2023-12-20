@@ -28,15 +28,9 @@ public class ElasticSearchConfiguration {
                     @Override
                     public HttpAsyncClientBuilder customizeHttpClient(HttpAsyncClientBuilder httpAsyncClientBuilder) {
                         final BasicCredentialsProvider basicCredentialsProvider = new BasicCredentialsProvider();
-                        basicCredentialsProvider.setCredentials(
-                            AuthScope.ANY,
-                            new UsernamePasswordCredentials(username, password)
-                        );
+                        basicCredentialsProvider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(username, password));
                         return httpAsyncClientBuilder.setDefaultCredentialsProvider(basicCredentialsProvider);
-                    }
-                })
+                    }})
         );
-
     }
-
 }
