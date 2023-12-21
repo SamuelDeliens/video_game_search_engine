@@ -31,7 +31,6 @@ public class Launcher {
                     return message;
                 });
             }
-            SpringApplication.run(Launcher.class, args);
         } catch (Exception e) { System.exit(1); }
     }
 }
